@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import NavBar from "../components/NavBar";
 
 function Directors() {
   const [directors, setDirectors] = useState([]);
@@ -13,7 +12,6 @@ function Directors() {
 
   return (
     <>
-      <NavBar />
       <h1>Directors Page</h1>
       {directors.map(director => (
         <article key={director.id}>
@@ -27,6 +25,6 @@ function Directors() {
       ))}
     </>
   );
-};
+}
 
 export default Directors;
