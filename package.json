@@ -31,7 +31,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "server": "json-server --watch db.json --port 4000",
+    "server": "json-server --watch db.json --port 3000",
     "lint": "eslint .",
     "test": "vitest run --reporter=@learn-co-curriculum/jest-learn-reporter --reporter=default",
     "preview": "vite preview"

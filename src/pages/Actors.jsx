@@ -5,7 +5,7 @@ function Actors() {
   const [actors, setActors] = useState([]);
 
   useEffect(() => {
-    fetch("/actors")
+    fetch("http://localhost:3000/actors")
       .then(r => r.json())
       .then(data => setActors(data))
       .catch(error => console.error("Error fetching actors:", error));
