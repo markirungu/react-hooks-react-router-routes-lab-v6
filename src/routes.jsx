@@ -1,35 +1,36 @@
-// src/routes.js
-import App from './App'; // Import the App component
-import Home from "./pages/Home";
-import Actors from "./pages/Actors";
-import Directors from "./pages/Directors";
-import Movie from "./pages/Movie";
-import ErrorPage from "./pages/ErrorPage";
+// routes.js - CHANGE THIS:
+import App from './App';
+import Home from './pages/Home';
+import Movie from './pages/Movie';
+import Directors from './pages/Directors';
+import Actors from './pages/Actors';
+import ErrorPage from './pages/ErrorPage';
 
-const routes = [
+// Export the ROUTES array (not router):
+const routes = [  // <-- Change 'router' to 'routes'
   {
-    path: "/",
-    element: <App />, // This wraps ALL child routes
+    path: '/',
+    element: <App />,
     errorElement: <ErrorPage />,
-    children: [ // These are nested inside App
+    children: [
       {
-        index: true, // Same as path: "/"
+        index: true,
         element: <Home />
       },
       {
-        path: "directors", // Note: no leading "/"
+        path: 'movie/:id',
+        element: <Movie />
+      },
+      {
+        path: 'directors',
         element: <Directors />
       },
       {
-        path: "actors", // Note: no leading "/"
+        path: 'actors',
         element: <Actors />
-      },
-      {
-        path: "movie/:id", // Note: no leading "/"
-        element: <Movie />
       }
     ]
   }
 ];
 
-export default routes;
+export default routes;  // <-- Export 'routes', not 'router'

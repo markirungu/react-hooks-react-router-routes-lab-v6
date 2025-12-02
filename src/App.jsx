@@ -1,4 +1,3 @@
-// src/App.jsx
 import { Outlet } from 'react-router-dom';
 import NavBar from './components/NavBar';
 
@@ -11,4 +10,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;  // MUST be default export
