@@ -6,7 +6,7 @@ function Home() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/movies")
+    fetch("/movies")
       .then(r => r.json())
       .then(data => setMovies(data))
       .catch(error => console.error("Error fetching movies:", error));
